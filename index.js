@@ -14,8 +14,8 @@ define([], function() {
         find_city: function(province_id) {
             return query(city_data[province_id].children);
         },
-        find_region: function(city_id) {
-            return query(city_data[city_id].children);
+        find_region: function(province_id, city_id) {
+            return query(city_data[province_id].children[city_id].children);
         }
     };
 });
